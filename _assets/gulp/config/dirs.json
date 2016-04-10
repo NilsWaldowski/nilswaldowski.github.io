@@ -1,0 +1,56 @@
+{
+	"production": {
+		"dest": {
+			"base": "../Dist_prod",
+			"css": "../Dist_prod/Css",
+			"icons": "../Dist_prod/Icons",
+			"images": "../Dist_prod/Images",
+			"images_edit": "../Dist_prod/PreparedImages",
+			"js": "../Dist_prod/Javascript",
+			"js_enhance": "../Dist_prod/JavascriptEnhancement",
+			"js_build": "../Dist_prod/Javascript/Build",
+			"js_vendor": "../Dist_prod/Vendor",
+			"fonts": "../Dist_prod/Fonts"
+		}
+	},
+	"development": {
+		"dest": {
+			"baseUrl": "/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default",
+			"base": "../Dist",
+			"css": "../Dist/Css",
+			"icons": "../Dist/Icons",
+			"images": "../Dist/Images",
+			"images_edit": "../Dist/PreparedImages",
+			"js": "../Dist/Javascript",
+			"js_enhance": "../Dist/JavascriptEnhancement",
+			"js_build": "../Dist/Javascript/Build",
+			"js_vendor": "../Dist/Vendor",
+			"fonts": "../Dist/Fonts"
+		}
+	},
+	"src": {
+		"icons": "FeSource/Icons",
+		"img": "FeSource/Images",
+		"img_edit": "FeSource/ImagesEditorial",
+		"js": "FeSource/Javascript",
+		"js_additional": "FeSource/JavascriptAdditional",
+		"js_enhance": "FeSource/JavascriptEnhancement",
+		"js_modules": "FeSource/Javascript/modules",
+		"js_build": "FeSource/Javascript/Build",
+		"js_vendor": "FeSource/Vendor",
+		"scss": "FeSource/Scss",
+		"fonts": "FeSource/Fonts"
+	},
+	"del": {
+		"production": "/../Dist",
+		"development": "./../Dist/"
+	},
+	"patternlab": {
+		"public": "./public",
+		"files": [
+			"source/_patterns/**/*.mustache",
+			"source/_patterns/**/*.json",
+			"source/_data/*.json"
+		]
+	}
+}

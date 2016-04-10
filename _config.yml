@@ -15,5 +15,19 @@ url: "http://www.nilswaldowski.de" # the base hostname & protocol for your site
 twitter_username: NilsWaldowski
 github_username:  NilsWaldowski
 
+# DEVELOPMENT
+css: /Dist/Css/screen.css
+js-require: /Dist/Vendor/requirejs/require.js
+js-require_config: /Dist/Javascript/config
+js-enhancement: /Dist/JavascriptEnhancement/progressive.enhancement.js
+js-html5shiv: /Dist/JavascriptEnhancement/html5shiv.js
+fonts-src: http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister
+
+# PRODUCTION
+css_production: /Dist_prod/Css/screen.min.css
+js-compiled_production: /Dist_prod/Javascript/Build/javascript.min.js
+js-enhancement_production: /Dist_prod/JavascriptEnhancement/progressive.enhancement.min.js
+js-html5shiv_production: /Dist_prod/JavascriptEnhancement/html5shiv.min.js
+
 # Build settings
 markdown: kramdown

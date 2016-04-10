@@ -1,0 +1,22 @@
+{
+    "bitwise": false,
+    "browser": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esnext": true,
+    "immed": true,
+    "indent": 4,
+    "jasmine": true,
+    "newcap": true,
+    "noarg": true,
+    "node": true,
+    "predef": {
+        "define": true,
+        "require": true
+    },
+    "quotmark": "single",
+    "strict": true,
+    "undef": true,
+    "unused": "vars"
+}

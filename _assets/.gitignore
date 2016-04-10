@@ -1,0 +1,12 @@
+*.log
+*.gz
+
+.idea
+logs
+npm-debug.log
+node_modules
+public
+/source
+config/config.ini
+/FeSource/Vendor
+/FeSource/Javascript/Build

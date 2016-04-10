@@ -1,0 +1,24 @@
+@mixin bp($media-query) {
+
+    @if $media-query == small {
+        @media only screen and (min-width: $bp-small) {
+            @content;
+        }
+    } @else if $media-query == medium-small {
+        @media only screen and (min-width: $bp-medium-small) {
+            @content;
+        }
+    } @else if $media-query == medium {
+        @media only screen and (min-width: $bp-medium) {
+            @content;
+        }
+    } @else if $media-query == large {
+        @media only screen and (min-width: $bp-large) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $media-query) {
+            @content;
+        }
+    }
+}
