@@ -1,0 +1,6 @@
+This directory is used for JS which needs to be integrated inline or will be used in a separate extension.
+
+Files in this directory have different behavior for Patternlab and the sitepackage Extension:
+
+* Patternlab:				files will be included in your main file "javascript.js" and will be executed after all your JS within the folder "Javascript"
+* Sitepackage Extension:	files will be written separately and are NOT included in the main file "javascript.min.js"

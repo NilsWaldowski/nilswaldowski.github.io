@@ -8,7 +8,73 @@
     <meta name="description"
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="{{ "
-    /css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% if jekyll.environment == "development" %}
+    <meta name="fullcss" content="{{ site.css }}">
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+    <meta name="fullcss" content="{{ site.css_production }}">
+    {% endif %}
+
+    {% if jekyll.environment == "development" %}
+    <!-- DEVELOPMENT: RequireJS includes all necessary Modules -->
+    <meta name="fulljs" content="{{ site.js-require }}">
+    {% endif %}
+
+    {% if jekyll.environment == "production" %}
+    <!-- PRODUCTION: single file with all necessary modules within -->
+    <meta name="fulljs" content="{{ site.js-compiled_production }}">
+    {% endif %}
+
+    <!-- ENHANCEMENT JS -->
+    {% if jekyll.environment == "development" %}
+    <script src="{{ site.js-enhancement }}"></script>
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+    <script type="application/javascript">
+        !function(e,t){"use strict";function n(t){var n=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,n.parentNode.insertBefore(r,n),r}function r(t,n,r){function a(){for(var e,n=0;n<l.length;n++)l[n].href&&l[n].href.indexOf(t)>-1&&(e=!0);e?o.media=r||"all":i(a)}var o=e.document.createElement("link"),c=n||e.document.getElementsByTagName("script")[0],l=e.document.styleSheets;return o.rel="stylesheet",o.href=t,o.media="only x",c.parentNode.insertBefore(o,c),a(),o}function a(t){for(var n,r=e.document.getElementsByTagName("meta"),a=0;a<r.length;a++)if(r[a].name&&r[a].name===t){n=r[a];break}return n}function o(n,r,a){var o;if(r===t){var i="; "+e.document.cookie,c=i.split("; "+n+"=");return 2==c.length?c.pop().split(";").shift():null}if(r===!1&&(a=-1),a){var l=new Date;l.setTime(l.getTime()+24*a*60*60*1e3),o="; expires="+l.toGMTString()}else o="";e.document.cookie=n+"="+r+o+"; path=/"}var i=e.setTimeout,c={},l=e.document,s=l.documentElement,m=(l.head||l.getElementsByTagName("head")[0],"fullcss"),u="fulljs",d="fonts",f=["enhanced"];c.loadJS=n,c.loadCSS=r,c.getMeta=a,c.cookie=o;var g=a(m);if(g&&!o(m)&&(r(g.content),o(m,"true",7)),"querySelector"in l&&"localStorage"in e&&"addEventListener"in e){s.className+=" "+f.join(" ");var h=a(u);h&&n(h.content);var v=a(d);v&&!o(d)&&(r(v.content),o(d,"true",7)),e.enhance=c}}(this);
+    </script>
+    {% endif %}
+
+
+    <meta name="fonts" content="{{ site.fonts-src }}">
+
+    <!--#if expr="$HTTP_COOKIE=/fullcss\=true/" -->
+    {% if jekyll.environment == "development" %}
+    <link rel="stylesheet" href="{{ site.css }}">
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+    <link rel="stylesheet" href="{{ site.css_production }}">
+    {% endif %}
+    <!--#else -->
+
+    <!--#if expr="$HTTP_COOKIE=/fonts\=true/" -->
+    <link rel="stylesheet" href="{{ site.fonts-src }}">
+    <!--#else -->
+
+    <noscript>
+        {% if jekyll.environment == "development" %}
+        <link rel="stylesheet" href="{{ site.css }}">
+        {% endif %}
+        {% if jekyll.environment == "production" %}
+        <link rel="stylesheet" href="{{ site.css_production }}">
+        {% endif %}
+        <link rel="stylesheet" href="{{ site.fonts-src }}">
+    </noscript>
+    <!--#endif -->
+
+    <!--[if lt IE 9]>
+    {% if jekyll.environment == "development" %}
+    <script src="{{ site.js-html5shiv }}"></script>
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+    <script src="{{ site.js-html5shiv_production }}"></script>
+    {% endif %}
+    <![endif]-->
+
+    {% if jekyll.environment == "development" %}
+    <script data-main="{{ site.js-require_config }}"></script>
+    {% endif %}
+
 </head>

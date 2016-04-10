@@ -1,0 +1,11 @@
+.#{$prefix}section,
+%#{$prefix}section {
+    position: relative;
+}
+
+.#{$prefix}section__wrapper,
+%#{$prefix}section__wrapper {
+    margin: 0 auto;
+    max-width: 1190px;
+    padding: 0 20px;
+}
