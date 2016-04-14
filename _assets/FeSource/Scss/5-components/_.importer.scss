@@ -6,7 +6,11 @@
 *   Components
 *   Discrete, complete chunks of UI (e.g. .slider {} or main-menu).
 */
-@import 'components.cms-content-divider';
-@import 'components.cms-content-header';
-@import 'components.cms-content-menu';
-@import 'components.cms-content-textmedia';
+@import 'components.page.header';
+@import 'components.post-list';
+@import 'components.post-detail';
+
+/**
+*   Posts
+*/
+@import 'posts/components.post-2016-04-12-search-form';
