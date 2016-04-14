@@ -1,0 +1,76 @@
+.#{$prefix}post-2016-04-12-search-form,
+%#{$prefix}post-2016-04-12-search-form {
+
+    form {
+        overflow: hidden;
+    }
+}
+
+.#{$prefix}post-2016-04-12-search-form__container,
+%#{$prefix}post-2016-04-12-search-form__container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.#{$prefix}post-2016-04-12-search-form__label,
+%#{$prefix}post-2016-04-12-search-form__label {
+    display: block;
+
+    .enhanced & {
+        display: none;
+    }
+}
+
+.#{$prefix}post-2016-04-12-search-form__input,
+%#{$prefix}post-2016-04-12-search-form__input {
+    .enhanced & {
+        padding: 0 8px;
+        height: 40px;
+        line-height: 40px;
+        float: left;
+        outline: none;
+        border: 1px solid $c-grey-light;
+        transition: border-color .5s .2s;
+
+        &:focus {
+            border-color: $c-black;
+
+            + button {
+                text-indent: 0;
+                right: 4px;
+                height: 32px;
+                width: 32px;
+                border-radius: 0;
+                color: #fff;
+                background-color: #000;
+                transform: translateY(-50%) rotate(0deg);
+                transition: right .1s,
+                    width .4s,
+                    transform .3s .3s,
+                    height .2s .55s ease-in,
+                    background-color .3s .3s,
+                    color .4s .65s;
+            }
+        }
+    }
+}
+
+.#{$prefix}post-2016-04-12-search-form__button,
+%#{$prefix}post-2016-04-12-search-form__button {
+    .enhanced & {
+        padding: 0;
+        height: 1px;
+        width: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(-180deg);
+        border: 0;
+        background-color: #000;
+        position: absolute;
+        color: #000;
+        overflow: hidden;
+        transition: right .2s .2s,
+            width .4s,
+            height .4s;
+    }
+}

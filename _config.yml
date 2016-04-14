@@ -21,7 +21,7 @@ js-require: /Dist/Vendor/requirejs/require.js
 js-require_config: /Dist/Javascript/config
 js-enhancement: /Dist/JavascriptEnhancement/progressive.enhancement.js
 js-html5shiv: /Dist/JavascriptEnhancement/html5shiv.js
-fonts-src: http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister
+fonts-src: https://fonts.googleapis.com/css?family=Open+Sans|Merriweather:300
 
 # PRODUCTION
 css_production: /Dist_prod/Css/screen.min.css

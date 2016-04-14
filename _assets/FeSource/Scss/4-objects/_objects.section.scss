@@ -6,6 +6,10 @@
 .#{$prefix}section__wrapper,
 %#{$prefix}section__wrapper {
     margin: 0 auto;
-    max-width: 1190px;
+    max-width: 960px;
     padding: 0 20px;
+
+    @include bp(small) {
+        //padding: 0 20px;
+    }
 }

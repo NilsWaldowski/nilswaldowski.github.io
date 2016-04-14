@@ -2,8 +2,9 @@
 layout: default
 ---
 <section class="o-section">
-    <div class="o-section__wrapper">
-        <article class="c-post-detail" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="c-post-detail" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div class="o-section__wrapper">
             <header>
                 <h1 itemprop="name headline">{{ page.title }}</h1>
                 <p class="c-post-detail__meta">
@@ -13,12 +14,14 @@ layout: default
                     itemprop="name">{{ page.author }}</span></span>{% endif %}
                 </p>
             </header>
-            <div class="c-post-detail__content" itemprop="articleBody">
-                {{ content }}
-            </div>
+        </div>
+        <div class="c-post-detail__content" itemprop="articleBody">
+            {{ content }}
+        </div>
+        <div class="o-section__wrapper">
             <div class="c-post-detail__back-link">
                 <a href="/">Back</a>
             </div>
-        </article>
-    </div>
+        </div>
+    </article>
 </section>

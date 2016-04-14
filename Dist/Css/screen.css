@@ -1,3 +1,9 @@
+/**
+* Fonts
+*/
+/**
+* Border
+*/
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -372,42 +378,51 @@ html {
        box-sizing: inherit; }
 
 /**
+* Fonts
+*/
+/**
+* Border
+*/
+/**
 *   Base Styles
 *   Unclassed HTML Elements (e.g. a, p, h1)
+*/
+body {
+  margin: 0;
+  min-height: 100vh; }
+
+/*
+code {
+    background-color: $c-grey-light;
+    padding: 1px 3px;
+}
 */
 figure {
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   word-break: normal;
-  word-wrap: inherit; }
+  word-wrap: inherit;
+  margin: 0; }
 
-/*
 h1 {
-
-}
+  margin-bottom: 8px;
+  line-height: 1.05; }
 
 h2 {
-
-}
+  margin-bottom: 6px;
+  line-height: 1.1; }
 
 h3 {
-
-}
+  margin-bottom: 4px;
+  line-height: 1.1; }
 
 h4 {
+  margin-bottom: 2px;
+  line-height: 1.1; }
 
-}
-
-h5 {
-
-}
-
-h6 {
-
-}
-*/
 iframe {
   border: 0 !important;
   width: 100% !important; }
@@ -417,42 +432,48 @@ img {
   height: auto;
   display: block; }
 
+a {
+  color: #555;
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
+
 object {
   pointer-events: none; }
+
+pre {
+  margin: 0;
+  display: inline-block;
+  padding: 20px;
+  background-color: #ddd; }
 
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-/*
 body {
-    font-family: $base-font-family;
-    color: $c-font-main;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300; }
+  @media only screen and (min-width: 48em) {
+    body {
+      font-size: 16px;
+      line-height: 1.25; } }
+  @media only screen and (min-width: 64em) {
+    body {
+      font-size: 18px;
+      line-height: 1.3; } }
+  @media only screen and (min-width: 80em) {
+    body {
+      font-size: 18px;
+      line-height: 1.35; } }
 
-    // desktop font-sizes for core verison
-    font-size: $base-font-size-large;
-    line-height: $base-line-height-large;
-
-    .enhanced & {
-        font-size: $base-font-size;
-        line-height: $base-line-height;
-
-        @include bp(medium-small) {
-            font-size: $base-font-size-small;
-            line-height: $base-line-height-small;
-        }
-
-        @include bp(medium) {
-            font-size: $base-font-size-medium;
-            line-height: $base-line-height-medium;
-        }
-
-        @include bp(large) {
-            font-size: $base-font-size-large;
-            line-height: $base-line-height-large;
-        }
-    }
-}
+/**
+* Fonts
+*/
+/**
+* Border
 */
 /**
 *   Objects
@@ -463,108 +484,120 @@ body {
 
 .o-section__wrapper {
   margin: 0 auto;
-  max-width: 1190px;
+  max-width: 960px;
   padding: 0 20px; }
 
+/**
+* Fonts
+*/
+/**
+* Border
+*/
 /**
 *   Components
 *   Discrete, complete chunks of UI (e.g. .slider {} or main-menu).
 */
+.c-page-header {
+  padding: 10px 0;
+  margin: 0 0 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-family: "Open Sans", sans-serif; }
+  .c-page-header a {
+    color: #000;
+    text-decoration: none; }
+
+.c-post-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .c-post-list ul li {
+    margin-bottom: 20px; }
+    @media only screen and (min-width: 64em) {
+      .c-post-list ul li {
+        margin-bottom: 35px; } }
+
+.c-post-list__item h2 a {
+  text-decoration: none;
+  color: #000; }
+  .c-post-list__item h2 a:hover {
+    text-decoration: underline; }
+
+.c-post-list__item__meta {
+  font-size: smaller; }
+
+.c-post-detail__meta {
+  margin: 0 0 25px;
+  font-size: smaller; }
+
+.c-post-detail__back-link {
+  margin-top: 40px; }
+
 /**
-* clear floats
+*   Posts
 */
-.b-content-textmedia__textpic {
+.c-post-2016-04-12-search-form form {
   overflow: hidden; }
 
-/**
-* prevent images from overtower the cols
-*/
-.b-content-textmedia__images__list__item {
-  max-width: 100%; }
+.c-post-2016-04-12-search-form__container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; }
+
+.c-post-2016-04-12-search-form__label {
+  display: block; }
+  .enhanced .c-post-2016-04-12-search-form__label {
+    display: none; }
+
+.enhanced .c-post-2016-04-12-search-form__input {
+  padding: 0 8px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  outline: none;
+  border: 1px solid #ddd;
+  -webkit-transition: border-color .5s .2s;
+  transition: border-color .5s .2s; }
+  .enhanced .c-post-2016-04-12-search-form__input:focus {
+    border-color: #000; }
+    .enhanced .c-post-2016-04-12-search-form__input:focus + button {
+      text-indent: 0;
+      right: 4px;
+      height: 32px;
+      width: 32px;
+      border-radius: 0;
+      color: #fff;
+      background-color: #000;
+      -webkit-transform: translateY(-50%) rotate(0deg);
+          -ms-transform: translateY(-50%) rotate(0deg);
+              transform: translateY(-50%) rotate(0deg);
+      -webkit-transition: right .1s, width .4s, height .2s .55s ease-in, background-color .3s .3s, color .4s .65s, -webkit-transform .3s .3s;
+      transition: right .1s, width .4s, height .2s .55s ease-in, background-color .3s .3s, color .4s .65s, -webkit-transform .3s .3s;
+      transition: right .1s, width .4s, transform .3s .3s, height .2s .55s ease-in, background-color .3s .3s, color .4s .65s;
+      transition: right .1s, width .4s, transform .3s .3s, height .2s .55s ease-in, background-color .3s .3s, color .4s .65s, -webkit-transform .3s .3s; }
+
+.enhanced .c-post-2016-04-12-search-form__button {
+  padding: 0;
+  height: 1px;
+  width: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+      -ms-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+  border: 0;
+  background-color: #000;
+  position: absolute;
+  color: #000;
+  overflow: hidden;
+  -webkit-transition: right .2s .2s, width .4s, height .4s;
+  transition: right .2s .2s, width .4s, height .4s; }
 
 /**
-* reset/set globals for textmedia images
+* Fonts
 */
-.b-content-textmedia__images {
-  /**
-    * set images to 100% if:
-    * - multiple images beside each
-    * - 50% image / text split
-    */ }
-  .b-content-textmedia__textpic--intext .b-content-textmedia__images img,
-  .b-content-textmedia__images .b-content-textmedia__images__list img {
-    width: 100%; }
-  .b-content-textmedia__images ul {
-    overflow: hidden;
-    list-style: none;
-    margin: 0 !important;
-    padding: 0 !important; }
-    .b-content-textmedia__images ul li {
-      margin: 0 !important; }
-
 /**
-* InText / BesideText Styling
+* Border
 */
-.b-content-textmedia__textpic--intext {
-  /**
-    * space between image list (in col)
-    */ }
-  @media only screen and (min-width: 48em) {
-    .b-content-textmedia__textpic--intext {
-      /**
-        * image / text 'GRID'
-        */
-      /**
-        * image / text floats and spaces
-        */ }
-      .b-content-textmedia__textpic--intext .b-content-textmedia__images {
-        max-width: -webkit-calc(50% + 1rem);
-        max-width: calc(50% + 1rem); }
-      .b-content-textmedia__textpic--intext .b-content-textmedia__bodytext {
-        width: 100%; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--left .b-content-textmedia__images {
-        float: left;
-        padding-right: 2rem; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--right .b-content-textmedia__images {
-        float: right;
-        padding-left: 2rem; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--nowrap .b-content-textmedia__images {
-        max-width: 50%; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--nowrap .b-content-textmedia__bodytext {
-        width: 100%; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--nowrap.b-content-textmedia__textpic--right .b-content-textmedia__images {
-        float: right; }
-      .b-content-textmedia__textpic--intext.b-content-textmedia__textpic--nowrap.b-content-textmedia__textpic--left .b-content-textmedia__images {
-        float: left; } }
-  .b-content-textmedia__textpic--intext .b-content-textmedia__images__list__item + .b-content-textmedia__images__list__item {
-    padding-top: 2rem; }
-
-/**
-* Above / Below Styling
-*/
-.b-content-textmedia__textpic--above,
-.b-content-textmedia__textpic--below {
-  /**
-    * space between image list (in col)
-    */ }
-  @media only screen and (min-width: 48em) {
-    .b-content-textmedia__textpic--above .b-content-textmedia__images__list__item + .b-content-textmedia__images__list__item,
-    .b-content-textmedia__textpic--below .b-content-textmedia__images__list__item + .b-content-textmedia__images__list__item {
-      padding-top: 0; }
-    .b-content-textmedia__textpic--above .b-content-textmedia__images__list__item,
-    .b-content-textmedia__textpic--below .b-content-textmedia__images__list__item {
-      float: left;
-      max-width: 50%; }
-      .b-content-textmedia__textpic--above .b-content-textmedia__images__list__item:nth-child(1),
-      .b-content-textmedia__textpic--below .b-content-textmedia__images__list__item:nth-child(1) {
-        padding-right: 1rem; }
-      .b-content-textmedia__textpic--above .b-content-textmedia__images__list__item:nth-child(2),
-      .b-content-textmedia__textpic--below .b-content-textmedia__images__list__item:nth-child(2) {
-        padding-left: 1rem; } }
-  .b-content-textmedia__textpic--above .b-content-textmedia__images__list__item + .b-content-textmedia__images__list__item,
-  .b-content-textmedia__textpic--below .b-content-textmedia__images__list__item + .b-content-textmedia__images__list__item {
-    padding-top: 2rem; }
-
 /**
 *   Helpers
 *   e.g. clearfix
@@ -605,6 +638,12 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
+/**
+* Fonts
+*/
+/**
+* Border
+*/
 /**
 *   Trumps
 *   High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {})

@@ -1,0 +1,15 @@
+.#{$prefix}post-detail,
+%#{$prefix}post-detail {
+
+}
+
+.#{$prefix}post-detail__meta,
+%#{$prefix}post-detail__meta {
+    margin: 0 0 25px;
+    font-size: smaller;
+}
+
+.#{$prefix}post-detail__back-link,
+%#{$prefix}post-detail__back-link {
+    margin-top: 40px;
+}
