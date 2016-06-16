@@ -20,6 +20,8 @@
 %#{$prefix}post-list__item {
 
     h2 {
+        margin-top: 0;
+
         a {
             text-decoration: none;
             color: $c-font-main;
