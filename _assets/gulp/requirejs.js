@@ -2,7 +2,7 @@ var dirs = require('./config/dirs.json');
 
 module.exports = function(gulp, plugins, options) {
     return function() {
-        gulp.src(options.dirs.src.js + '/**/*.js')
+        gulp.src(options.dirs.src.js + '/**/main.js')
             .pipe(plugins.requirejsOptimize(function(file) {
 
                 if (options.env === 'production') {

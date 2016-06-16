@@ -7,3 +7,5 @@ _site
 logs
 npm-debug.log
 node_modules
+_backup
+_articles

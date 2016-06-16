@@ -1,6 +1,9 @@
 .#{$prefix}post-detail,
 %#{$prefix}post-detail {
 
+    h1 {
+        margin-bottom: .2em;
+    }
 }
 
 .#{$prefix}post-detail__meta,
