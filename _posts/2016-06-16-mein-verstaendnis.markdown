@@ -155,7 +155,7 @@ Das es kein einseitiges Projekt geben kann, habe ich schon erwähnt, richtig? Ei
 gemeinsam entstehen. Nur mit der Bereitschaft vom Kunden, Zeit für das Projekt aufzubringen und auch das Verständnis
 für die _Hausaufgaben_ zu haben, lässt sich das realisieren, was alle von Beginn an anstreben.
 
-## Noch Fragen oder Disussionsbedarf?
+## Noch Fragen oder Diskussionsbedarf?
 
 Dann [schreibt][mail] mir doch ganz einfach!
 
