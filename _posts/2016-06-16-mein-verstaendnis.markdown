@@ -3,6 +3,9 @@ layout: post
 title:  "Webprojekte - Mein Verständnis"
 date:   2016-06-16 15:06:27 +0200
 categories: blog
+description: Mein Prozessverständnis für die Umsetzung von erfolgreichen Webprojekten.
+keywords: Web, Workflow, Design, Konzept, Prozess, Research, Discovery, Content-Analyse, Strategieentwicklung
+tags:
 ---
 
 Die Basis für eine erfolgreiche Zusammenarbeit liegt im gemeinsamen Verständnis für die Aufgabe.
