@@ -3,6 +3,9 @@ layout: post
 title:  "Webprojekte - Mein Verständnis"
 date:   2016-06-16 15:06:27 +0200
 categories: blog
+description: Mein Prozessverständnis für die Umsetzung von erfolgreichen Webprojekten.
+keywords: Web, Workflow, Design, Konzept, Prozess, Research, Discovery, Content-Analyse, Strategieentwicklung
+tags:
 ---
 
 Die Basis für eine erfolgreiche Zusammenarbeit liegt im gemeinsamen Verständnis für die Aufgabe.
@@ -15,12 +18,12 @@ mein Verständnis von einem erfolgreichen Web-Projekt.
 Erst Design, anschließend die technische Umsetzung und zum Schluss kommt der Inhalt. Zugegeben etwas vereinfacht aber so in
 etwa sahen die meisten Projekte vor der Zeit des responsive Webdesigns aus. Danach wurde alles iterativ und agil. Wasserfall
 war out. *Scrum* und *Kanban* heißen die modernen Ansätze, die viel versprechen aber im Alltag nicht immer das halten,
-was von Agenturen mit wohl klingenden Worten und Frasen verkauft wird.
+was von Agenturen mit wohl klingenden Worten und Phrasen verkauft wird.
 
-Selbst mit modernen Projektphilosophien arbeiten viele Argenturen unter der Haube noch immer mit dem klassischen Weg
+Selbst mit modernen Projektphilosophien arbeiten viele Agenturen unter der Haube noch immer mit dem klassischen Weg
 *Design > technische Umsetzung > Content*. Die Konzeptarbeit wird im Rahmen der Design-Entwicklung gleich mit erledigt,
 danach versuchen Entwickler das zu realisieren, was sich in einem völlig anderen und statischen Medium erarbeitet
-wurde und zu guter Letzt wird der Inhalt in diese Lösung gezwengt.
+wurde und zu guter Letzt wird der Inhalt in diese Lösung gezwängt.
 
 An meiner Wortwahl könnt ihr sicherlich schon ganz gut ausmachen, was ich von dieser Arbeitsweise halte.
 Und obwohl Web-Projekte jahrelang nach diesem Prinzip umgesetzt wurden, heißt das noch lange nicht, dass es damals - im
@@ -80,13 +83,13 @@ Aus groben Ansätzen werden in iterativer Weiterentwicklung konkrete Lösungssze
 
 ## Roadmap
 
-Nach langerem Gerede nun etwas handfestes für die Skeptiker unter euch. Die einzelnen Schritte der Roadmap
+Nach langem Gerede nun etwas handfestes für die Skeptiker unter euch. Die einzelnen Schritte der Roadmap
 können recht gut für sich betrachtet werden, auch wenn im Projektalltag nicht immer alles so Trennscharf ist. Wichtig
 ist vor allem das Bewusstsein, dass die ersten beiden Schritte die Grundlage für das gesamte Projekt bilden. Alle
-Fragestellungen, die im Projektalltag auftreten, sollten unter Berücksichtung dieser Ergebnisse bewertet werden können.
+Fragestellungen, die im Projektalltag auftreten, sollten unter Berücksichtigung dieser Ergebnisse bewertet werden können.
 
 Die darauf aufbauenden Projektschritte sollten mehr als wiederkehrender Kreislauf und weniger als zeitlicher Ablauf in
-Hinbick auf den Gesamtfortschritt verstanden werden. So werden die letzten Phasen für die vielen Inhaltstypen,
+Hinblick auf den Gesamtfortschritt verstanden werden. So werden die letzten Phasen für die vielen Inhaltstypen,
 Navigationselemente und sonstigen Bestandteile der Website immer wieder durchlaufen.
 
 1. __Research & Discovery__ - *Wer sind wir? Was haben wir? Wo wollen wir hin?*
@@ -97,13 +100,13 @@ Navigationselemente und sonstigen Bestandteile der Website immer wieder durchlau
 
 4. __Technische Umsetzung__ - *Wie bringen wir die Ideen zum User?*
 
-5. __Testen & Anpassgen__ - *Erreichen wir unsere Ziele?*
+5. __Testen & Anpassen__ - *Erreichen wir unsere Ziele?*
 
 
 ## Kalkulation
 
 Ein in unser dynamischen und agilen Arbeitswelt häufig diskutiertes Thema ist die Form der Projektkalkulation.
-Studen- oder Wochenbasis, Aufwandsschätzung anhand der definierten Projektspezifikationen.
+Stunden- oder Wochenbasis, Aufwandsschätzung anhand der definierten Projektspezifikationen.
 Wird der gesamte Prozess in mehreren Arbeitspaketen unterteilt angeboten (z.B. Konzeption, Design, Entwicklung)
 oder als ganzes verkauft? Wie so häufig gibt es keine allgemeingültige Antwort. Die Projektgröße und der
 zeitliche Horizont sind die offensichtlichsten Einflussfaktoren.
@@ -140,7 +143,7 @@ untereinander entstehen. Hier muss das Bewusstsein vorhanden sein, dass eine Ver
 auch die eigentliche Projekt-Deadline beeinflusst. Alle Beteiligten sollten daher großes Interesse daran haben,
 die Fertigstellung der einzelnen Arbeitspakete zu ermöglichen.
 
-Der folgende Rythmus hat sich hierfür als besonders praktikabel erwiesen:
+Der folgende Rhythmus hat sich hierfür als besonders praktikabel erwiesen:
 
 * __Freitag__ erhält der Kunde die Ergebnisse aus der laufenden Woche
 * Am __Montag__ darauf wird dieser Arbeitsstand in einer Telko besprochen - hier geht es um ein gemeinsames Verständnis

@@ -9,7 +9,8 @@
 title: NilsWaldowski.de
 email: me@nilswaldowski.de
 description: > # this means to ignore newlines until "baseurl:"
-  Persönlicher Blog von Nils Waldowski über TYPO3, RWD (Responsive Webdesign), SASS, CSS, jQuery, HTML5, CMS, Workflow u.v.m.
+  Artikel über moderne Webentwicklung, Performance, Progressive Enhancement, Frontend- und Design-Workflows.
+keywords: SCSS, JS, Javascript, jQuery, Progressive Enhancement, Frontend, RWD, Performance, Web, Workflows
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.nilswaldowski.de" # the base hostname & protocol for your site
 twitter_username: NilsWaldowski
