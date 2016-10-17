@@ -1,0 +1,48 @@
+.u-grid-debug {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 9999999;
+    font-size: 0;
+
+    &.is-visible {
+        visibility: visible;
+    }
+}
+
+.u-grid-debug__inner {
+    padding-left: calc((100% - #{$page-max-width}) / 2);
+    padding-right: calc((100% - #{$page-max-width}) / 2);
+    height: 100%;
+    max-width: calc(#{$page-max-width} + (100% - #{$page-max-width}));
+
+    @include bp(sm) {
+        margin-left: $grid-cols-gutter;
+        margin-right: $grid-cols-gutter;
+    }
+}
+
+.u-grid-debug__col {
+    padding-left: $grid-cols-gutter;
+    padding-right: $grid-cols-gutter;
+    height: 100%;
+    display: inline-block;
+    width: 100% / $grid-cols-small;
+
+    @include bp(sm) {
+        width: 100% / $grid-cols-medium;
+    }
+
+    @include bp(lg) {
+        width: 100% / $grid-cols-large;
+    }
+}
+
+.u-grid-debug__col-inner {
+    background-color: rgba(lightgrey, .5);
+    height: 100%;
+}

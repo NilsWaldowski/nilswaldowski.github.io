@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Creating Text Align and Vertical Align Classes
+   ========================================================================== */
+.u-a\:l {
+    text-align: left !important;
+}
+
+.u-a\:c {
+    text-align: center !important;
+}
+
+.u-a\:r {
+    text-align: right !important;
+}
+
+.u-va\:t {
+    vertical-align: top !important;
+}
+
+.u-va\:m {
+    vertical-align: middle !important;
+}
+
+.u-va\:b {
+    vertical-align: bottom !important;
+}
+
+.u-va\:bl {
+    vertical-align: baseline !important;
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @include bp($breakpoint) {
+
+        .u-a\:l\@#{$breakpoint} {
+            text-align: left !important;
+        }
+
+        .u-a\:c\@#{$breakpoint} {
+            text-align: center !important;
+        }
+
+        .u-a\:r\@#{$breakpoint} {
+            text-align: right !important;
+        }
+
+        .u-va\:t\@#{$breakpoint} {
+            vertical-align: top !important;
+        }
+
+        .u-va\:m\@#{$breakpoint} {
+            vertical-align: middle !important;
+        }
+
+        .u-va\:b\@#{$breakpoint} {
+            vertical-align: bottom !important;
+        }
+
+        .u-va\:bl\@#{$breakpoint} {
+            vertical-align: baseline !important;
+        }
+    }
+}

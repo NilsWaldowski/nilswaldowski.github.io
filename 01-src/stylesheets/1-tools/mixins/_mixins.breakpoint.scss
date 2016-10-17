@@ -1,0 +1,99 @@
+@mixin bp($media-query: 0, $media-query-max: false) {
+
+    $query: '';
+    $type-max: type-of($media-query-max);
+
+    @if $media-query-max == false {
+
+        @if $media-query == xs {
+            @media only screen and (min-width: map-get($breakpoints, xs)) {
+                @content;
+            }
+        } @else if $media-query == sm {
+            @media only screen and (min-width: map-get($breakpoints, sm)) {
+                @content;
+            }
+        } @else if $media-query == md {
+            @media only screen and (min-width: map-get($breakpoints, md)) {
+                @content;
+            }
+        } @else if $media-query == lg {
+            @media only screen and (min-width: map-get($breakpoints, lg)) {
+                @content;
+            }
+        } @else if $media-query == xl {
+            @media only screen and (min-width: map-get($breakpoints, xl)) {
+                @content;
+            }
+        } @else if $media-query == xxl {
+            @media only screen and (min-width: map-get($breakpoints, xxl)) {
+                @content;
+            }
+        } @else {
+            @media only screen and (min-width: $media-query) {
+                @content;
+            }
+        }
+    } @else {
+
+        @if $media-query == xs {
+            $query: append($query, '(min-width: #{map-get($breakpoints, xs)})');
+        }
+
+        @if $media-query == sm {
+            $query: append($query, '(min-width: #{map-get($breakpoints, sm)})');
+        }
+
+        @if $media-query == md {
+            $query: append($query, '(min-width: #{map-get($breakpoints, md)})');
+        }
+
+        @if $media-query == lg {
+            $query: append($query, '(min-width: #{map-get($breakpoints, lg)})');
+        }
+
+        @if $media-query == xl {
+            $query: append($query, '(min-width: #{map-get($breakpoints, xl)})');
+        }
+
+        @if $media-query == xxl {
+            $query: append($query, '(min-width: #{map-get($breakpoints, xxl)})');
+        }
+
+        @if $media-query != 0 and $media-query-max != false {
+            $query: append($query, 'and');
+        }
+
+        @if $media-query-max == xs {
+            $query: append($query, '(max-width: #{map-get($breakpoints, xs) - 1})');
+        }
+
+        @if $media-query-max == sm {
+            $query: append($query, '(max-width: #{map-get($breakpoints, sm) - 1})');
+        }
+
+        @if $media-query-max == md {
+            $query: append($query, '(max-width: #{map-get($breakpoints, md) - 1})');
+        }
+
+        @if $media-query-max == lg {
+            $query: append($query, '(max-width: #{map-get($breakpoints, lg) - 1})');
+        }
+
+        @if $media-query-max == xl {
+            $query: append($query, '(max-width: #{map-get($breakpoints, xl) - 1})');
+        }
+
+        @if $media-query-max == xxl {
+            $query: append($query, '(max-width: #{map-get($breakpoints, xxl) - 1})');
+        }
+
+        @if $type-max == number {
+            $query: append($query, '(max-width: #{$media-query-max})');
+        }
+
+        @media only screen and #{$query} {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+/* ==========================================================================
+   Font File Declaration (@font-face)
+   ========================================================================== */
+@include font-face(MyFont, '/dist/misc/fonts/myfont', null, null, eot otf woff woff2);
+@include font-face(MyFontItalic, '/dist/misc/fonts/myfontItalic', null, null, eot otf woff woff2);
+@include font-face(MyFontBold, '/dist/misc/fonts/myfontBold', null, null, eot otf woff woff2);

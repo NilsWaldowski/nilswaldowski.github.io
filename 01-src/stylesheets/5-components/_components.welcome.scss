@@ -1,0 +1,36 @@
+.c-welcome {
+    min-height: 400px;
+    height: 100vh;
+
+    &__inner {
+
+        @include bp(sm) {
+            transform: translateY(-50%);
+        }
+
+        > * {
+            max-width: 700px;
+            margin: 0 auto;
+            transform: translateY(40px);
+            transition: transform .75s ease-out, opacity .7s ease-in;
+            opacity: 0;
+
+            @include bp(sm) {
+                transform: translateY(40px) scale(1.15);
+            }
+
+            &:nth-child(2) {
+                transition-delay: .2s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: .3s;
+            }
+
+            .has-loading-completed & {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}

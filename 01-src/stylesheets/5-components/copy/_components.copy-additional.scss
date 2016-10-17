@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Copy Styles (Intro, Teaser, ...)
+   ========================================================================== */
+.o-copy-intro {
+    font-size: 18px;
+    line-height: 1.55;
+
+    @include bp(md) {
+        font-size: 20px;
+    }
+}
+
+.o-copy-quote {
+    font-size: 20px;
+    line-height: 1.8;
+
+    @include bp(md) {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,1 @@
+define(["svg4everybody"],function(){"use strict";var e={init:function(){svg4everybody({nosvg:!0,polyfill:!0})}};return e});

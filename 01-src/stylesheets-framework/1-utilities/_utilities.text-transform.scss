@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Creating Text Transform Classes (uppercase, lowercase, capitalize, none)
+   ========================================================================== */
+.u-t-t\:u {
+    text-transform: uppercase !important;
+}
+
+.u-t-t\:l {
+    text-transform: lowercase !important;
+}
+
+.u-t-t\:c {
+    text-transform: capitalize !important;
+}
+
+.u-t-t\:n {
+    text-transform: none !important;
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @include bp($breakpoint) {
+
+        .u-t-t\:u\@#{$breakpoint} {
+            text-transform: uppercase !important;
+        }
+
+        .u-t-t\:l\@#{$breakpoint} {
+            text-transform: lowercase !important;
+        }
+
+        .u-t-t\:c\@#{$breakpoint} {
+            text-transform: capitalize !important;
+        }
+
+        .u-t-t\:n\@#{$breakpoint} {
+            text-transform: none !important;
+        }
+    }
+}

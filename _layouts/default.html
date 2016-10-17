@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<!-- #if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="de" class="fonts-loaded">
+<!-- #else -->
+<html lang="de">
+<!-- #endif -->
 
 {% include head.html %}
 
 <body>
 
+<div class="o-page-wrapper">
 {% include header.html %}
 
 {{ content }}
 
 {% include footer.html %}
+</div>
 
 </body>
 

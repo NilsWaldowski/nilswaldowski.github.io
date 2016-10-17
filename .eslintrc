@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "jasmine": true,
+        "node": true
+    },
+    "globals": {
+        "$": false,
+        "jQuery": false,
+        "TweenMax": false,
+        "TweenLite": false,
+        "Power1": false,
+        "Power2": false,
+        "Power3": false,
+        "Power4": false,
+        "MQ": false
+    },
+    "rules": {
+        "no-bitwise": 0,
+        "camelcase": 2,
+        "curly": 2,
+        "eqeqeq": 2,
+        "eol-last": 2,
+        "wrap-iife": [
+            2,
+            "any"
+        ],
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "new-cap": 2,
+        "no-caller": 2,
+        "no-floating-decimal": 2,
+        "quotes": [
+            2,
+            "single"
+        ],
+        "strict": [
+            2,
+            "function"
+        ],
+        "no-undef": 0,
+        "no-unused-vars": 1,
+        "no-multiple-empty-lines": 1,
+        "space-before-function-paren": [2, "never"],
+        "one-var": [
+            2,
+            "always"
+        ],
+        "max-len": [
+            2,
+            120
+        ]
+    }
+}

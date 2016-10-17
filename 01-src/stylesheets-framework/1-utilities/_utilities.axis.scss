@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Creating Positioning Classes (Top, Left, Bottom, Right)
+   ========================================================================== */
+$utility-axis-properties: (
+    'top': top,
+    'right': right,
+    'bottom': bottom,
+    'left': left
+);
+
+
+
+
+/* ==========================================================================
+   Creating Classes:
+        top/right/bottom/left (e.g. .u-left\:0 to .u-left\:10)
+   ========================================================================== */
+@each $property, $propertyName in $utility-axis-properties {
+
+    @each $size, $value in $g-spacing-map {
+
+        .u-#{$propertyName}#{$size} {
+            #{$property}: $value !important;
+        }
+    }
+
+    .u-#{$propertyName}\:50 {
+        #{$property}: 50% !important;
+    }
+
+    .u-#{$propertyName}\:100 {
+        #{$property}: 100% !important;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint (e.g. .u-left\:0\@xs)
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @each $property, $propertyName in $utility-axis-properties {
+
+        @each $size, $value in $g-spacing-map {
+
+            @include bp($breakpoint) {
+                .u-#{$propertyName}#{$size}\@#{$breakpoint} {
+                    #{$property}: $value !important;
+                }
+            }
+        }
+
+        @include bp($breakpoint) {
+
+            .u-#{$propertyName}\:50\@#{$breakpoint} {
+                #{$property}: 50% !important;
+            }
+
+            .u-#{$propertyName}\:100\@#{$breakpoint} {
+                #{$property}: 100% !important;
+            }
+        }
+    }
+}
