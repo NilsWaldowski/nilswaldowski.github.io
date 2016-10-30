@@ -1,16 +1,12 @@
 define([
     'domReady',
-    'modules/module1',
-    'modules/svg4everybody'
-], function(domReady,
-    module1,
-    svg4everybody) {
+    'modules/module1'
+], function(domReady, module1) {
     'use strict';
 
     require(['domReady!'], function() {
 
         module1.init();
-        svg4everybody.init();
 
     });
 });

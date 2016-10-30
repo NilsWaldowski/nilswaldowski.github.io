@@ -71,7 +71,8 @@
     <link rel="stylesheet" href="{{ site.css-framework--prod }}" media="all"/>
 
     <!-- Almond Optimized Build -->
-    <script async src="{{ js.build }}"></script>
+    <!-- script async src="{{ site.js-build }}"></script -->
+    <script async data-main="{{ site.js-config }}" src="{{ site.js-core }}"></script>
 
     <!-- Cookie Helper Inline -->
     <script>

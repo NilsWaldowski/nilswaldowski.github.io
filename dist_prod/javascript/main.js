@@ -1,1 +1,1 @@
-define(["domReady","modules/module1","modules/svg4everybody"],function(e,d,i){"use strict";require(["domReady!"],function(){d.init(),i.init()})});
+define(["domReady","modules/module1"],function(e,d){"use strict";require(["domReady!"],function(){d.init()})});

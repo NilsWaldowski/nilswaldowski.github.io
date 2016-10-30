@@ -148,6 +148,7 @@ body:after {
    ========================================================================== */
 body {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -488,6 +489,10 @@ abbr:hover {
 .c-welcome {
   min-height: 400px;
   height: 100vh;
+}
+
+.c-welcome__inner {
+  overflow: hidden;
 }
 
 .c-welcome__inner > * {

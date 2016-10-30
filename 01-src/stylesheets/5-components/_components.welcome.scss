@@ -3,6 +3,7 @@
     height: 100vh;
 
     &__inner {
+        overflow: hidden;
 
         @include bp(sm) {
             transform: translateY(-50%);
