@@ -1,0 +1,804 @@
+/* ==========================================================================
+   Basic setup and variables
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* ==========================================================================
+   Functions and Mixins
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Generic stuff (e.g. box-sizing, reset-css)
+   ========================================================================== */
+/**
+* http://meyerweb.com/eric/tools/css/reset/
+* v2.0 | 20110126
+* License: none (public domain)
+* Changes applied:
+*   - border: 0 just for img, abbr and acronym (not every element)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+img,
+abbr,
+acronym,
+iframe {
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   Font File Declaration (@font-face)
+   ========================================================================== */
+@font-face {
+  font-family: "MyFont";
+  src: url("/dist/misc/fonts/myfont.eot?") format("eot"), url("/dist/misc/fonts/myfont.otf") format("opentype"), url("/dist/misc/fonts/myfont.woff") format("woff"), url("/dist/misc/fonts/myfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MyFontItalic";
+  src: url("/dist/misc/fonts/myfontItalic.eot?") format("eot"), url("/dist/misc/fonts/myfontItalic.otf") format("opentype"), url("/dist/misc/fonts/myfontItalic.woff") format("woff"), url("/dist/misc/fonts/myfontItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MyFontBold";
+  src: url("/dist/misc/fonts/myfontBold.eot?") format("eot"), url("/dist/misc/fonts/myfontBold.otf") format("opentype"), url("/dist/misc/fonts/myfontBold.woff") format("woff"), url("/dist/misc/fonts/myfontBold.woff2") format("woff2");
+}
+
+/* ==========================================================================
+   Breakpoint Match with Javascript with 'font-family-hack'
+        IMPORTANT: every breakpoint is used in order to control the sorting
+        of Media Queries when we use a "Combine Media Queries" Tool (this
+        will be the first "hit" for the Tool and is therefore the leading
+        sorting/order!
+   ========================================================================== */
+html {
+  font-family: 'small';
+}
+
+body:after {
+  content: 'small';
+  display: none;
+}
+
+/* ==========================================================================
+   Bare and unclassed HTML elements (e.g. image, a, h1)
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Base Styles (e.g. Unclassed HTML Elements)
+   ========================================================================== */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 100%;
+  background-color: #222;
+}
+
+iframe {
+  width: 100% !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
+object {
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Global Typography Definitions
+   ========================================================================== */
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #d9d9d9;
+}
+
+.fonts-loaded body {
+  font-family: "Roboto", "Helvetica", Arial, sans-serif;
+}
+
+i,
+cite,
+address,
+em,
+dfn {
+  font-style: italic;
+}
+
+.fonts-loaded i, .fonts-loaded
+cite, .fonts-loaded
+address, .fonts-loaded
+em, .fonts-loaded
+dfn {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.fonts-loaded strong, .fonts-loaded
+b {
+  font-family: "Kanit", "Helvetica", Arial, sans-serif;
+  font-weight: 600;
+}
+
+abbr {
+  border-bottom: 1px dotted;
+}
+
+abbr:hover {
+  cursor: help;
+}
+
+/* ==========================================================================
+   Styling for non-cosmetic design patterns (e.g. wrapper, layouts, sections)
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Styling for non-cosmetic design patterns (e.g. wrapper, layouts, sections)
+   ========================================================================== */
+/* ==========================================================================
+   Content Area + Content Items within
+   ========================================================================== */
+.o-content__item {
+  margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   Specific UI components (e.g. c-stage, c-text-media)
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Specific UI components (e.g. c-stage, c-text-media)
+   ========================================================================== */
+/* ==========================================================================
+   Styling Classes for Content-Wrapper
+   ========================================================================== */
+.c-copy-content,
+[id^='atoms-'] {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.c-copy-content p,
+[id^='atoms-'] p {
+  margin-bottom: 1.5rem;
+}
+
+.c-copy-content a,
+[id^='atoms-'] a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.c-copy-content a:hover, .c-copy-content a:focus,
+[id^='atoms-'] a:hover,
+[id^='atoms-'] a:focus {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Copy Styles (Intro, Teaser, ...)
+   ========================================================================== */
+.o-copy-intro {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.o-copy-quote {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+.c-heading\:1 {
+  font-size: 26px;
+  line-height: 1;
+  margin: 0 0 1.75rem;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fonts-loaded .c-heading\:1 {
+  font-family: "Kanit", "Helvetica", Arial, sans-serif;
+  font-weight: 800;
+}
+
+.c-heading\:2 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.c-heading\:3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 1.25rem;
+}
+
+.c-loading {
+  min-height: 400px;
+  height: 100vh;
+  background-color: rgba(68, 68, 68, 0.7);
+  -webkit-transition: background-color .8s ease-in;
+  transition: background-color .8s ease-in;
+}
+
+.is-loading .c-loading {
+  background-color: transparent;
+}
+
+.c-loading__inner {
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translateY(-50%) translateX(50%);
+  -ms-transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(50%);
+}
+
+.c-loading__logo {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity .4s ease-in;
+  transition: opacity .4s ease-in;
+}
+
+.is-loading .c-loading__logo {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.has-loaded .c-loading__logo {
+  -webkit-animation: logo-animation 1.3s ease-in;
+  animation: logo-animation 1.3s ease-in;
+}
+
+.c-loading__logo a {
+  display: inline-block;
+  color: inherit;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .4s ease-out;
+  transition: -webkit-transform .4s ease-out;
+  transition: transform .4s ease-out;
+  transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+}
+
+.c-loading__logo a:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+@-webkit-keyframes logo-position {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(50%);
+    transform: translateY(-50%) translateX(50%);
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  }
+  40% {
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  50% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  90% {
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  100% {
+    -webkit-transform: translateY(10px) translateX(-10px);
+    transform: translateY(10px) translateX(-10px);
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes logo-position {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(50%);
+    transform: translateY(-50%) translateX(50%);
+    opacity: .6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  }
+  40% {
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  50% {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  90% {
+    opacity: .2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  }
+  100% {
+    -webkit-transform: translateY(10px) translateX(-10px);
+    transform: translateY(10px) translateX(-10px);
+    top: 0;
+    right: 0;
+  }
+}
+
+@-webkit-keyframes logo-animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.c-welcome {
+  min-height: 400px;
+  height: 100vh;
+}
+
+.c-welcome__inner {
+  overflow: hidden;
+}
+
+.c-welcome__inner > * {
+  max-width: 700px;
+  margin: 0 auto;
+  -webkit-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  transform: translateY(40px);
+  -webkit-transition: opacity .7s ease-in, -webkit-transform .75s ease-out;
+  transition: opacity .7s ease-in, -webkit-transform .75s ease-out;
+  transition: transform .75s ease-out, opacity .7s ease-in;
+  transition: transform .75s ease-out, opacity .7s ease-in, -webkit-transform .75s ease-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.c-welcome__inner > *:nth-child(2) {
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+
+.c-welcome__inner > *:nth-child(3) {
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+.has-loading-completed .c-welcome__inner > * {
+  -webkit-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* ==========================================================================
+   Helpers (e.g. h-clearfix)
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Helpers (e.g. h-clearfix)
+   ========================================================================== */
+/* ==========================================================================
+   Hide Elements visually but keep them available for screen readers
+   ========================================================================== */
+.h-accessibility {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+/* ==========================================================================
+   Padding-Top/Absolute-Trick to archive fixed Space with a set Ratio
+   ========================================================================== */
+.h-ar-21x9 {
+  position: relative;
+}
+
+.h-ar-21x9:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.h-ar-21x9 > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.h-ar-16x9 {
+  position: relative;
+}
+
+.h-ar-16x9:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.h-ar-16x9 > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.h-ar-4x3 {
+  position: relative;
+}
+
+.h-ar-4x3:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 75%;
+}
+
+.h-ar-4x3 > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ==========================================================================
+   Standard Clearfix Helper
+   ========================================================================== */
+.h-clearfix:before, .h-clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ==========================================================================
+   Text Truncate / Ellipsis
+   ========================================================================== */
+.h-text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Utilities and helper classes with ability to override anything which goes
+   before in the triangle (declarations in this layer will carry !important)
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Utilities and helper classes with ability to override anything which goes
+   before in the triangle (declarations in this layer will carry !important)
+   ========================================================================== */
+/* ==========================================================================
+   Remove all Button Styles
+   ========================================================================== */
+.u-reset-button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+  text-transform: inherit;
+}
+
+.u-reset-button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.u-reset-button:focus {
+  outline: none;
+}
+
+/* ==========================================================================
+   Additional vendor libraries which must be be overwritten for the most part
+   ========================================================================== */
+/* ==========================================================================
+   Z-Index
+   ========================================================================== */
+/* ==========================================================================
+   Content Spaced
+   ========================================================================== */
+/* Susy Grid */
+/* ==========================================================================
+   Additional vendor libraries which must be be overwritten for the most part
+   ========================================================================== */
+@media only screen and (min-width: 500px) {
+  html {
+    font-family: 'small';
+  }
+  body:after {
+    font-family: 'small';
+  }
+}
+@media only screen and (min-width: 700px) {
+  html {
+    font-family: 'small';
+  }
+  body:after {
+    font-family: 'small';
+  }
+  .c-heading\:1 {
+    font-size: 32px;
+  }
+  .has-loaded .c-loading__inner {
+    -webkit-animation: logo-position .5s ease-out forwards;
+    animation: logo-position .5s ease-out forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  .c-welcome__inner {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .c-welcome__inner > * {
+    -webkit-transform: translateY(40px) scale(1.15);
+    -ms-transform: translateY(40px) scale(1.15);
+    transform: translateY(40px) scale(1.15);
+  }
+}
+@media only screen and (min-width: 900px) {
+  html {
+    font-family: 'medium';
+  }
+  body:after {
+    font-family: 'medium';
+  }
+  .o-content__item {
+    margin-bottom: 5rem;
+  }
+  .c-copy-content,
+  [id^='atoms-'] {
+    line-height: 1.7;
+  }
+  .c-copy-content p,
+  [id^='atoms-'] p {
+    margin-bottom: 2rem;
+  }
+  .o-copy-intro {
+    font-size: 20px;
+  }
+  .o-copy-quote {
+    font-size: 24px;
+  }
+  .c-heading\:1 {
+    font-size: 36px;
+    line-height: 1;
+    margin: 0 0 2.5rem;
+  }
+  .c-heading\:2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0 0 2rem;
+  }
+  .c-heading\:3 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 0 0 1.75rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  html {
+    font-family: 'large';
+  }
+  body:after {
+    font-family: 'large';
+  }
+}
+@media only screen and (min-width: 1300px) {
+  html {
+    font-family: 'large';
+  }
+  body:after {
+    font-family: 'large';
+  }
+}
+@media only screen and (min-width: 1700px) {
+  html {
+    font-family: 'large';
+  }
+  body:after {
+    font-family: 'large';
+  }
+}
+@media only screen and (max-width: 699px) {
+  .c-loading__inner {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+  }
+  .has-loaded .c-loading__inner {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+  }
+}

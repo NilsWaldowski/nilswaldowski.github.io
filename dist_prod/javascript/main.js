@@ -1,0 +1,1 @@
+define(["domReady","modules/module1"],function(e,d){"use strict";require(["domReady!"],function(){d.init()})});

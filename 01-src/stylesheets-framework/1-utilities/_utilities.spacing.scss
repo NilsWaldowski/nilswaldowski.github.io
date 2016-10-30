@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Creating Spacing Classes (Margin & Padding)
+   ========================================================================== */
+$utility-spacing-directions: (
+    null: null,
+    '-top': -t,
+    '-right': -r,
+    '-bottom': -b,
+    '-left': -l
+);
+
+$utility-spacing-properties: (
+    'padding': p,
+    'margin': m
+);
+
+
+
+
+/* ==========================================================================
+   Creating Classes:
+        padding/margin-top/right/bottom/left: (.u-p\:0 to .u-p\:10)
+   ========================================================================== */
+@each $property, $propertyName in $utility-spacing-properties {
+
+    @each $direction, $directionName in $utility-spacing-directions {
+
+        @each $size, $value in $g-spacing-map {
+
+            .u-#{$propertyName}#{$directionName}#{$size} {
+                #{$property}#{$direction}: $value !important;
+            }
+        }
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint (e.g. .u-p\:0\@xs)
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @each $property, $propertyName in $utility-spacing-properties {
+
+        @each $direction, $directionName in $utility-spacing-directions {
+
+            @each $size, $value in $g-spacing-map {
+
+                @include bp($breakpoint) {
+                    .u-#{$propertyName}#{$directionName}#{$size}\@#{$breakpoint} {
+                        #{$property}#{$direction}: $value !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Styling Classes for Content-Wrapper
+   ========================================================================== */
+.c-copy-content,
+[id^='atoms-'] {
+    font-size: 16px;
+    line-height: 1.4;
+
+    @include bp(md) {
+        line-height: 1.7;
+    }
+
+    // how does a paragraph is looking in the content area
+    p {
+        margin-bottom: $g-spacing-unit-3;
+
+        @include bp(md) {
+            margin-bottom: $g-spacing-unit-5;
+        }
+    }
+
+    // how does a link is looking in the content area
+    a {
+        text-decoration: underline;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}

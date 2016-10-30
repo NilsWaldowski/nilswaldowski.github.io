@@ -1,0 +1,40 @@
+{
+    "src": {
+        "base": "01-src",
+        "scss": "01-src/stylesheets",
+        "scss_framework": "01-src/stylesheets-framework",
+        "js": "01-src/javascript",
+        "js_core": "01-src/javascript-core",
+        "js_inline": "01-src/javascript-inline",
+        "misc": "01-src/misc",
+        "images": "01-src/images",
+        "imagesEditorial": "01-src/images-editorial",
+        "icons": "01-src/icons",
+        "vendor": "01-src/vendor"
+    },
+    "dist": {
+        "base": "./dist",
+        "css": "./dist/stylesheets",
+        "js": "./dist/javascript",
+        "js_core": "./dist/javascript-core",
+        "js_inline": "./dist/javascript-inline",
+        "misc": "./dist/misc",
+        "images": "./dist/images",
+        "imagesEditorial": "./dist/images-editorial",
+        "icons": "./dist/icons",
+        "vendor": "./dist/vendor",
+
+        "deploy": {
+            "base": "./dist_prod",
+            "css": "./dist_prod/stylesheets",
+            "js": "./dist_prod/javascript",
+            "js_core": "./dist_prod/javascript-core",
+            "js_inline": "./dist_prod/javascript-inline",
+            "misc": "./dist_prod/misc",
+            "images": "./dist_prod/images",
+            "imagesEditorial": "./dist_prod/images-editorial",
+            "icons": "./dist_prod/icons",
+            "vendor": "./dist_prod/vendor"
+        }
+    }
+}

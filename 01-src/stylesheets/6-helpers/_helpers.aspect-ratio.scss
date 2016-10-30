@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Padding-Top/Absolute-Trick to archive fixed Space with a set Ratio
+   ========================================================================== */
+.h-ar-21x9,
+%h-ar-21x9 {
+    @include aspect-ratio(16px, 9px);
+}
+
+.h-ar-16x9,
+%h-ar-16x9 {
+    @include aspect-ratio(16px, 9px);
+}
+
+.h-ar-4x3,
+%h-ar-4x3 {
+    @include aspect-ratio(4px, 3px);
+}

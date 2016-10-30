@@ -1,0 +1,1 @@
+require.config({baseUrl:"/dist_prod/javascript/",paths:{domReady:"../vendor/requirejs-domready/domReady"},deps:["main"],shim:{}});

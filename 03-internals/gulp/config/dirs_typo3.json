@@ -1,0 +1,40 @@
+{
+    "src": {
+        "base": "01-src",
+        "scss": "01-src/stylesheets",
+        "scss_framework": "01-src/stylesheets-framework",
+        "js": "01-src/javascript",
+        "js_core": "01-src/javascript-core",
+        "js_inline": "01-src/javascript-inline",
+        "misc": "01-src/misc",
+        "images": "01-src/images",
+        "imagesEditorial": "01-src/images-editorial",
+        "icons": "01-src/icons",
+        "vendor": "01-src/vendor"
+    },
+    "dist": {
+        "base": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default",
+        "css": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/stylesheets",
+        "js": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript",
+        "js_core": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript-core",
+        "js_inline": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript-inline",
+        "misc": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/misc",
+        "images": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/images",
+        "imagesEditorial": "./public/fileadmin/prepared-images",
+        "icons": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/icons",
+        "vendor": "./public/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/vendor",
+
+        "deploy": {
+            "base": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default",
+            "css": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/stylesheets",
+            "js": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript",
+            "js_core": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript-core",
+            "js_inline": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/javascript-inline",
+            "misc": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/misc",
+            "images": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/images",
+            "imagesEditorial": "../httpdocs/fileadmin/prepared-images",
+            "icons": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/icons",
+            "vendor": "../httpdocs/typo3conf/ext/gm7_sitepackage/Resources/Public/_Default/vendor"
+        }
+    }
+}

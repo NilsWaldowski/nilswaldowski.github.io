@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    // https://24ways.org/2009/dont-lose-your-focus
+    &:hover,
+    &:active {
+        outline: none;
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "sass": {
+        "outputStyle": "expanded"
+    },
+    "rename": {
+        "suffix": ".min"
+    },
+    "size": {
+        "showFiles": true
+    },
+    "postCss": {
+        "imageinliner": {
+            "assetPaths": "[options.dirs.dist[options.env].base]",
+            "maxFileSize": 10240
+        }
+    },
+    "pleeease": {
+        "filters": true,
+        "pseudoElements": true,
+        "opacity": true,
+        "import": true,
+        "mqpacker": true,
+        "minifier": false,
+        "rem": false,
+        "next": false,
+        "autoprefixer": {
+            "browsers": [
+                "> 1% in DE",
+                "Android >= 4.1",
+                "Explorer >= 9",
+                "Firefox >= 17",
+                "iOS >= 6",
+                "last 4 versions",
+                "Opera >= 12.1",
+                "Safari >= 7"
+            ],
+            "cascade": false
+        }
+    },
+    "requirejs": {
+
+    },
+    "imagemin": {
+        "#hint": "Lossless conversion to progressive JPG related",
+        "progressive": true,
+
+        "#hint": "Select an optimization level between 0 and 7,  optimization level 0 enables a set of optimization operations that require minimal effort PNG related",
+        "optimizationLevel": 3,
+
+        "#hint": "Optimize svg multiple times until it's fully optimized",
+        "multipass": true,
+
+        "#hint": "Interlace gif for progressive rendering",
+        "interlaced": true,
+
+        "svgoPlugins": [
+            {
+                "#hint": "remove or cleanup enable-background attribute when possible",
+                "cleanUpEnableBackground": true
+            },
+            {
+                "#hint": "remove XML processing instructions",
+                "removeXMLProcInst": true
+            },
+            {
+                "#hint": "cleanup attributes from newlines, trailing and repeating spaces",
+                "cleanupAttrs": true
+            },
+            {
+                "#hint": "remove viewBox attribute when possible",
+                "removeViewBox": false
+            },
+            {
+                "#hint": "remove unused and minify used IDs",
+                "cleanupIDs": true
+            },
+            {
+                "#hint": "remove <metadata>",
+                "removeMetaData": true
+            },
+            {
+                "#hint": "round numeric values to the fixed precision, remove default 'px' units",
+                "cleanupNumericValues": {
+                    "floatPrecision": 1 }
+            },
+            {
+                "#hint": "round numeric values in attributes that take a list of numbers",
+                "cleanupListOfValues": true
+            },
+            {
+                "#hint": "collapse useless groups",
+                "collapseGroups": true
+            },
+            {
+                "#hint": "remove useless stroke and fill attrs",
+                "removeUselessStrokeAndFill": true
+            },
+            {
+                "#hint": "remove empty attributes",
+                "removeEmptyAttrs": true
+            },
+            {
+                "#hint": "remove comments",
+                "removeComments": true
+            },
+            {
+                "#hint": "add classnames to an outer <svg> element",
+                "addClassesToSVGElement": {
+                    "className": "o-icon"
+                }
+            }
+        ]
+    },
+    "svgSprite": {
+        "shape": {
+            "dimension": {
+                "maxWidth": 128,
+                "maxHeight": 128,
+                "attribute": true
+            }
+        },
+        "mode": {
+            "viewDEACTIVATED": {
+                "render": {
+                    "scss": false
+                }
+            },
+            "symbol": {
+                "dest": "",
+                "sprite": "sprite.svg"
+            }
+        }
+    }
+}

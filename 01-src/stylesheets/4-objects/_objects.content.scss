@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Content Area + Content Items within
+   ========================================================================== */
+.o-content {
+
+    &__item {
+        margin-bottom: $g-spacing-unit-7;
+
+        @include bp(md) {
+            margin-bottom: $g-spacing-unit-9;
+        }
+    }
+}

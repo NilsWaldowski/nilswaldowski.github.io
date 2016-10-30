@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Website Grid System build with Susy
+   ========================================================================== */
+
+$susy: (
+    flow: ltr,
+    math: fluid,
+    output: float,
+    gutter-position: inside-static,
+    container: 100%,
+    container-position: center,
+    columns: $grid-cols-small,
+    column-width: 96px,
+    gutter: $grid-cols-gutter / 96px,
+    global-box-sizing: border-box,
+    last-flow: to,
+    debug: (
+        image: false,
+        color: rgba(#66f, .25),
+        output: background,
+        //output: overlay, -> toggle overlay
+        toggle: top right,
+    ),
+    use-custom: (
+        background-image: true,
+        background-options: false,
+        box-sizing: true,
+        clearfix: false,
+        rem: true,
+    )
+);
+
+$susy-s: (
+    columns: $grid-cols-medium
+);
+
+$susy-m: (
+    columns: $grid-cols-large
+);
+
+@include bp(sm) {
+    @include layout($susy-s);
+}
+
+@include bp(lg) {
+    @include layout($susy-m);
+}
+
+
+/* ==========================================================================
+   Grid Container
+   ========================================================================== */
+.u-grid {
+    @include container;
+    max-width: $page-max-width;
+    padding-left: $grid-cols-gutter;
+    padding-right: $grid-cols-gutter;
+
+    @include bp(sm) {
+        @include show-grid($grid-cols-medium);
+        padding-left: $grid-cols-gutter * 2;
+        padding-right: $grid-cols-gutter * 2;
+    }
+
+    @include bp(lg) {
+        @include show-grid($grid-cols-large);
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Grid Row
+   ========================================================================== */
+.u-grid__row {
+    @include clearfix;
+    margin-left: -$grid-cols-gutter;
+    margin-right: -$grid-cols-gutter;
+}
+
+
+
+
+/* ==========================================================================
+   Grid Item global Selector
+   ========================================================================== */
+.u-grid__col {
+    padding-left: $grid-cols-gutter;
+    padding-right: $grid-cols-gutter;
+    min-height: 1px;
+
+    overflow: hidden;
+}
+
+
+
+
+/* ==========================================================================
+   Create classes:
+        .u-grid__col-s-1 to .u-grid__col-s-4
+   ========================================================================== */
+@mixin u-grid-classes {
+
+    $cols: $grid-cols-large;
+
+    @while $cols > 0 {
+
+        @for $i from 1 through $cols {
+
+            .u-w\:#{$i}of#{$cols} {
+
+                @if $i <= $cols - 1 {
+                    @include span($i of $cols no-gutters);
+                } @else {
+                    @include span($cols of $cols no-gutters);
+                }
+            }
+        }
+
+        $cols: $cols - 1;
+    }
+}
+
+@include u-grid-classes;
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint (e.g. .u-left\:0\@xs)
+   ========================================================================== */
+@mixin u-grid-classes-breakpoints {
+
+    @each $breakpoint, $breakpointName in $breakpoints {
+
+        $cols: $grid-cols-large;
+
+        @while $cols > 0 {
+
+            @for $i from 1 through $cols {
+
+                .u-w\:#{$i}of#{$cols}\@#{$breakpoint} {
+
+                    @if $i <= $cols - 1 {
+
+                        @include bp($breakpoint) {
+                            @include span($i of $cols no-gutters);
+                        }
+                    } @else {
+
+                        @include bp($breakpoint) {
+                            @include span($cols of $cols no-gutters);
+                        }
+                    }
+                }
+            }
+
+            $cols: $cols - 1;
+        }
+    }
+}
+
+@include u-grid-classes-breakpoints;
+
+
+
+
+/* ==========================================================================
+   Release Item from Grid Context
+   ========================================================================== */
+.u-grid__release {
+    @include clearfix;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+
+    @include bp(xs) {
+        max-width: none;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+}

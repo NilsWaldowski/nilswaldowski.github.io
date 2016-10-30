@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Creating Spacing Classes (Margin & Padding for Left & Right)
+   ========================================================================== */
+$utility-padding-x-properties: (
+    'margin': m,
+    'padding': p
+);
+
+
+
+
+/* ==========================================================================
+   Creating Classes:
+        padding/margin + left&right (e.g. .u-p-x\:0 to .u-p-x\:10)
+   ========================================================================== */
+@each $property, $propertyName in $utility-padding-x-properties {
+
+    @each $size, $value in $g-spacing-map {
+
+        .u-#{$propertyName}-x#{$size} {
+            #{$property}-left: $value !important;
+            #{$property}-right: $value !important;
+        }
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint (e.g. .u-p-x\:0\@xs)
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @each $property, $propertyName in $utility-padding-x-properties {
+
+        @each $size, $value in $g-spacing-map {
+
+            @include bp($breakpoint) {
+
+                .u-#{$propertyName}-x#{$size}\@#{$breakpoint} {
+                    #{$property}-left: $value !important;
+                    #{$property}-right: $value !important;
+                }
+            }
+        }
+    }
+}

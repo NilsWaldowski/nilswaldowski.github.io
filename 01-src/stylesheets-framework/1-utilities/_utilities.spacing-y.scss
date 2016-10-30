@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Creating Spacing Classes (Margin & Padding for Top & Bottom)
+   ========================================================================== */
+$utility-padding-y-properties: (
+    'margin': m,
+    'padding': p
+);
+
+
+
+
+/* ==========================================================================
+   Creating Classes:
+        padding/margin + top&bottom (e.g. .u-p-y:0 to .u-p-y:10)
+   ========================================================================== */
+@each $property, $propertyName in $utility-padding-y-properties {
+
+    @each $size, $value in $g-spacing-map {
+
+        .u-#{$propertyName}-y#{$size} {
+            #{$property}-top: $value !important;
+            #{$property}-bottom: $value !important;
+        }
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint (e.g. .u-p-y:0\@xs)
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @each $property, $propertyName in $utility-padding-y-properties {
+
+        @each $size, $value in $g-spacing-map {
+
+            @include bp($breakpoint) {
+
+                .u-#{$propertyName}-y#{$size}\@#{$breakpoint} {
+                    #{$property}-top: $value !important;
+                    #{$property}-bottom: $value !important;
+                }
+            }
+        }
+    }
+}

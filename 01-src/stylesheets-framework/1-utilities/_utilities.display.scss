@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Creating Display Classes (none, inline, block, table, flex, ...)
+   ========================================================================== */
+.u-d\:n {
+    display: none !important;
+}
+
+.u-d\:i {
+    display: inline !important;
+}
+
+.u-d\:i-b {
+    display: inline-block !important;
+}
+
+.u-d\:b {
+    display: block !important;
+}
+
+.u-d\:t {
+    display: table !important;
+}
+
+.u-d\:t-c {
+    display: table-cell !important;
+}
+
+.u-d\:t-r {
+    display: table-row !important;
+}
+
+.u-d\:f {
+    display: flex !important;
+}
+
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @include bp($breakpoint) {
+
+        .u-d\:n\@#{$breakpoint} {
+            display: none !important;
+        }
+
+        .u-d\:i\@#{$breakpoint} {
+            display: inline !important;
+        }
+
+        .u-d\:i-b\@#{$breakpoint} {
+            display: inline-block !important;
+        }
+
+        .u-d\:b\@#{$breakpoint} {
+            display: block !important;
+        }
+
+        .u-d\:t\@#{$breakpoint} {
+            display: table !important;
+        }
+
+        .u-d\:t-c\@#{$breakpoint} {
+            display: table-cell !important;
+        }
+
+        .u-d\:t-r\@#{$breakpoint} {
+            display: table-row !important;
+        }
+
+        .u-d\:f\@#{$breakpoint} {
+            display: flex !important;
+        }
+    }
+}

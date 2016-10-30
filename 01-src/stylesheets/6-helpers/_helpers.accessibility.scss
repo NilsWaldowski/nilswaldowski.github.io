@@ -1,0 +1,7 @@
+/* ==========================================================================
+   Hide Elements visually but keep them available for screen readers
+   ========================================================================== */
+.h-accessibility,
+%h-accessibility {
+    @include accessibility;
+}

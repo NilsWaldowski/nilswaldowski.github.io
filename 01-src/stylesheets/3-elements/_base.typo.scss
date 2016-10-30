@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Global Typography Definitions
+   ========================================================================== */
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $base-font-family--fallback;
+    color: $c-gray-2;
+
+    .fonts-loaded & {
+        font-family: $base-font-family;
+    }
+}
+
+i, // italic
+cite, // citation
+address, // addres
+em, // emphasized
+dfn { // defining
+    //font-family: $base-font-family-italic--fallback;
+    font-style: italic;
+
+    .fonts-loaded & {
+        //font-family: $base-font-family-italic;
+        font-style: italic;
+    }
+}
+
+strong,
+b {
+    font-family: $base-font-family-bold--fallback;
+    font-weight: bold;
+
+    .fonts-loaded & {
+        font-family: $base-font-family-bold;
+        font-weight: 600;
+    }
+}
+
+abbr {
+    border-bottom: 1px dotted;
+
+    &:hover {
+        cursor: help;
+    }
+}

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Creating Positioning Classes (static, relative, absolute, fixed)
+   ========================================================================== */
+.u-pos\:s {
+    position: static !important;
+}
+
+.u-pos\:r {
+    position: relative !important;
+}
+
+.u-pos\:a {
+    position: absolute !important;
+}
+
+.u-pos\:f {
+    position: fixed !important;
+}
+
+
+
+/* ==========================================================================
+   Creating above Classes for every Breakpoint
+   ========================================================================== */
+@each $breakpoint, $breakpointName in $breakpoints {
+
+    @include bp($breakpoint) {
+
+        .u-pos\:s\@#{$breakpoint} {
+            position: static !important;
+        }
+
+        .u-pos\:r\@#{$breakpoint} {
+            position: relative !important;
+        }
+
+        .u-pos\:a\@#{$breakpoint} {
+            position: absolute !important;
+        }
+
+        .u-pos\:f\@#{$breakpoint} {
+            position: fixed !important;
+        }
+    }
+}
